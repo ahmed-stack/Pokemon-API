@@ -2,7 +2,7 @@ import express, {json} from "express";
 import fetch from "node-fetch";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const BASE_URL = "https://pokeapi.co/api/v2";
 
