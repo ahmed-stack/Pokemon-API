@@ -6,6 +6,11 @@ const PORT = 3000;
 
 const BASE_URL = "https://pokeapi.co/api/v2";
 
+app.get("/", async (req, res) => {
+    res.send({status: 200, message : "Welcome to Node JS"});
+});
+
+
 app.get("/getPokemons", async (req, res) => {
     try {
         let pokemons = await fetch(`${BASE_URL}/pokemon/`);
